@@ -62,8 +62,8 @@ az aks get-credentials --name <AKS_CLUSTER_NAME> --resource-group <RESOURCE_GROU
 kubectl apply -f <consul-config.yaml>
 ```
 #### Deploys primary Consul datacenter on EKS.
-####Loads federation secret into AKS.
-####Deploys secondary Consul cluster.
+#### Loads federation secret into AKS.
+#### Deploys secondary Consul cluster.
 
 ### 7. Verify Cluster Federation
 ```bash

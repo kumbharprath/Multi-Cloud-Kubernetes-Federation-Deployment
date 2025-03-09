@@ -24,16 +24,16 @@ cd eks
 terraform init
 terraform apply
 ```
-#### Deploys an EKS cluster with worker nodes and VPC networking.
-#### Outputs authentication details for Kubernetes access.
+ Deploys an EKS cluster with worker nodes and VPC networking.
+ Outputs authentication details for Kubernetes access.
 
 ### 3. Provision an AKS Cluster (Azure)
 ```bash
 cd ../aks
 az login
 ```
-#### Create an Active Directory service principal for authentication.
-#### Rename and update terraform.tfvars with credentials.
+ Create an Active Directory service principal for authentication.
+ Rename and update terraform.tfvars with credentials.
 
 ### Initialize and apply Terraform:
 ```bash
@@ -48,8 +48,8 @@ terraform init
 terraform apply
 ```
 
-#### Uses terraform_remote_state to retrieve AKS & EKS cluster details.
-#### Configures Consul mesh gateways for federated networking.
+ Uses terraform_remote_state to retrieve AKS & EKS cluster details.
+ Configures Consul mesh gateways for federated networking.
 
 ### 5. Configure kubectl
 ```bash
@@ -61,9 +61,9 @@ az aks get-credentials --name <AKS_CLUSTER_NAME> --resource-group <RESOURCE_GROU
 ```bash
 kubectl apply -f <consul-config.yaml>
 ```
-#### Deploys primary Consul datacenter on EKS.
-#### Loads federation secret into AKS.
-#### Deploys secondary Consul cluster.
+ Deploys primary Consul datacenter on EKS.
+ Loads federation secret into AKS.
+ Deploys secondary Consul cluster.
 
 ### 7. Verify Cluster Federation
 ```bash
@@ -75,10 +75,10 @@ Ensures federated connectivity across clusters.
 cd ../counting-service
 kubectl apply -f <app-deployment.yaml>
 ```
-#### Deploys a multi-cluster microservice across EKS and AKS.
+ Deploys a multi-cluster microservice across EKS and AKS.
 
 ## Conclusion
-#### This project demonstrates multi-cloud Kubernetes federation, enabling cross-cluster communication and high availability.
+ This project demonstrates multi-cloud Kubernetes federation, enabling cross-cluster communication and high availability.
 
-#### For further improvements, consider Istio for service mesh and CI/CD automation.
+ For further improvements, consider Istio for service mesh and CI/CD automation.
 
